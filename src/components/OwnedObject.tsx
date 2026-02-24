@@ -4,7 +4,12 @@ const OwnedObject = () => {
   const account = useCurrentAccount();
   const { data: response, error, isPending} = useSuiClientQuery(
     "getOwnedObjects",{
-      owner: account?.address as string 
+      owner: account?.address as string, 
+      options: { 
+        showType: true, 
+        showOwner: true, 
+        showContent: true 
+      }
     },
     {
       enabled: !!account
