@@ -27,11 +27,10 @@ const balance = isCoin ? (onbjectRes.data?.content as any).feilds?.balance : 0
             <p className='text-gray-700 dark:text-gray-300'>
                 <strong>Owner</strong> {typeof owner  === 'object' ? owner.objectOwner : owner}
             </p>
-
             {
                 isCoin && (
                     <p className="text-gray-700 dark:text-gray-300">
-                         <strong>Balance:</strong> {balance}
+                        <strong>Balance:</strong>{balance}
                     </p>
                 )
             }
